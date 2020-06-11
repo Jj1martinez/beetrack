@@ -15,12 +15,19 @@ Para ambos ambiente se trabajó on bases de datos relacionales.En el ambiente de
 Modelo de Datos
 ----
 El modelo de datos se compone de 2 Entidades y 1 relación. 
-- Vechicle (vehículos) 
+- Vechicle (vehículos)  (1:N con Waypoints)
 
 |  | id | vechicle_identifier |
 | :-------: | :-------: | :------: |
 | Tipo | integer| integer | 
 | Ejemplo | 1| H2-DFGH |
+
+- Waypoint (Punto de localización)
+
+|  | id | latitude | longitude | vechicle_identifier| send_at |
+| :-------: | :-------: | :------: | :-----: | :-------: | :------: |
+| Tipo | float| float | string | string | string| 
+| Ejemplo | 45.32| 32.32 | H2-DFGH | 06/11/2020 19:19:11 |
 
 
 

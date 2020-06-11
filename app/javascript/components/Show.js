@@ -11,6 +11,7 @@ import MyImage from 'images/beetrackimg.png'
 // 1. Aqui deifnimos ell comportamiento visual de nuestro display
 const useStyles = makeStyles({
   root: {
+    margin:0,
     background: 'linear-gradient(to top, #f4b423, #f47e40, #d8515b, #662f69, #482b62, #2a2658, #05204a, #05204a, #05204a, #05204a)',
     backgroundSize: "cover",
     height: "100%",
@@ -43,9 +44,7 @@ const useStyles = makeStyles({
     paddingTop: 25,
   },
   leafletContainer :{
-    height: "65vh",
-    minWidth:"100%",
-    padding:"150px"
+    height: "65vh"
   },
   mapContainer:{
     width:"100%",

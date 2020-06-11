@@ -29,6 +29,10 @@ El modelo de datos se compone de 2 Entidades y 1 relación.
 | Tipo | float| float | string | string | string| 
 | Ejemplo | 1 |45.32| 32.32 | H2-DFGH | 06/11/2020 19:19:11 |
 
+API UI
+------
+Esta Api se compone de una sola ruta para visualizar los últimos waypoints de cada vechículo. También es posible agregar el waypoint deseado desde ahí con el formulario que se ofrece. De no querer agregarlo por ahí se puede hacer mediante la ruta de la API rest. 
+
 
 API REST Endpoints
 ---
@@ -70,6 +74,46 @@ Content-Type: application/json
   "created_at": "2020-06-11T23:27:50.773Z",
   "updated_at": "2020-06-11T23:27:50.773Z"
 }
+```
+
+- Obtener lista de todos los vehículos junto a sus últimos Waypoint
+
+Endpoint
+
+``` 
+get_waypoints
+``` 
+Example Request
+
+``` 
+GET get_waypoints
+``` 
+
+Example Response
+
+``` 
+HTTP/1.1 200 OK  
+Content-Type: application/json
+
+[
+    {
+      "id": 1,
+      "vehicle_identifier": "H3-23FT",
+      "created_at": "2020-06-10T16:40:12.795Z",
+      "updated_at": "2020-06-10T16:40:12.795Z"
+    },
+    {
+      "id": 2,
+      "latitude": 75.392,
+      "longitude": 75.123,
+      "vehicle_identifier": "H3-23FT",
+      "send_at": "2019-06-08T23:50:00.000Z",
+      "created_at": "2020-06-10T16:40:23.627Z",
+      "updated_at": "2020-06-10T16:40:23.627Z"
+    }
+  ]
+}
+```
 
 
 

@@ -77,7 +77,7 @@ const Show = () => {
     var longitudeDefault =  -70.67
     
     const getWaypoints = () => {
-      axios.get('/show')
+      axios.get('/get_waypoints')
       .then(res => {
         console.log(res)
         setCarsWaypoints(res.data)

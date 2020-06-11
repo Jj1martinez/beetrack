@@ -1,0 +1,11 @@
+POST  http://localhost:3000/api/v1/gps
+content-type: application/json
+
+{
+    "latitude": 51.06,
+    "longitude": -0.09,
+    "vehicle_identifier": "H2-23FT",
+    "send_at": "2019-06-8 23:49:00"
+}
+
+GET http://localhost:3000/show

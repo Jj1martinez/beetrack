@@ -32,7 +32,13 @@ El modelo de datos se compone de 2 Entidades y 1 relación.
 API UI
 ------
 Esta Api se compone de una sola ruta para visualizar los últimos waypoints de cada vechículo. También es posible agregar el waypoint deseado desde ahí con el formulario que se ofrece. De no querer agregarlo por ahí se puede hacer mediante la ruta de la API rest. 
+Al agregar un nuevo Waypoint el mapa se actualiza en tiempo real. Al hacer click en los waypoints podremos saber cual es la posición de esa marka y cúal vehículo es el seleccionado. 
+Para la visualización del mapa se utilizó la libreria Leaflet debido a su facil implementación y gratuidad. 
 
+Dirección UI 
+``` 
+/show
+``` 
 
 API REST Endpoints
 ---
@@ -43,12 +49,12 @@ Estas rutas al ser preguntadas o recibir un request devuelven una respuesta en f
 Endpoint
 
 ``` 
-api/v1/gps
+/api/v1/gps
 ``` 
 Example Request
 
 ``` 
-POST api/v1/gps
+POST /api/v1/gps
 content-type: application/json
 
 {
@@ -81,12 +87,12 @@ Content-Type: application/json
 Endpoint
 
 ``` 
-get_waypoints
+/get_waypoints
 ``` 
 Example Request
 
 ``` 
-GET get_waypoints
+GET /get_waypoints
 ``` 
 
 Example Response
@@ -115,6 +121,15 @@ Content-Type: application/json
 }
 ```
 
+USO
+----
+
+La api se encuentra en la url https://beetrack-api.herokuapp.com/ para su rapido uso y revisión. De querer correrlo en local se debe tener instalado rails 6.03 y la versión ruby 2.7. Luego se debe ejecutar la instalación de los módulos de node.js de la aplicación. Finalmente se debe crear la base de datos y correr las migraciones. De esta manera podemos ejecutar el comando de inicio para encontrarnos con nuestra aplciación en http://localhost:3000/show y nuestro mapa. 
+
+Detalle Backend
+----
+
+Se utilizaron dos controladores. Homepage para renderiar los componentes de React y Waypoint para hacer los calculos logicos y la interacción con la base de datos. 
 
 
 

@@ -27,8 +27,49 @@ El modelo de datos se compone de 2 Entidades y 1 relación.
 |  | id | latitude | longitude | vechicle_identifier| send_at |
 | :-------: | :-------: | :------: | :-----: | :-------: | :------: |
 | Tipo | float| float | string | string | string| 
-| Ejemplo | 45.32| 32.32 | H2-DFGH | 06/11/2020 19:19:11 |
+| Ejemplo | 1 |45.32| 32.32 | H2-DFGH | 06/11/2020 19:19:11 |
 
+
+API REST Endpoints
+---
+Estas rutas al ser preguntadas o recibir un request devuelven una respuesta en formato Json.
+
+- Agregar waypoint a la base de datos. 
+
+Endpoint
+
+``` 
+api/v1/gps
+``` 
+Example Request
+
+``` 
+POST api/v1/gps
+content-type: application/json
+
+{
+    "latitude": 51.06,
+    "longitude": -0.09,
+    "vehicle_identifier": "H2-23FT",
+    "send_at": "2019-06-8 23:49:00"
+}
+``` 
+
+Example Response
+
+``` 
+HTTP/1.1 200 OK  
+Content-Type: application/json
+
+{
+  "id": 64,
+  "latitude": 51.06,
+  "longitude": -0.09,
+  "vehicle_identifier": "H2-23FT",
+  "send_at": "2019-06-08T23:49:00.000Z",
+  "created_at": "2020-06-11T23:27:50.773Z",
+  "updated_at": "2020-06-11T23:27:50.773Z"
+}
 
 
 

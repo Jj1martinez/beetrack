@@ -9,17 +9,11 @@ import MyImage from 'images/beetrackimg.png'
 
 const useStyles = makeStyles({
   root: {
-    background: 'linear-gradient(0deg, #05204A 85%, yellow 100%)',
+    background: 'linear-gradient(to top, #f4b423, #f47e40, #d8515b, #662f69, #482b62, #2a2658, #05204a, #05204a, #05204a, #05204a)',
     backgroundSize: "cover",
     height: "100%",
     fontFamily: [
-    
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
+      "Roboto", "Helvetica", "Arial"
     ].join(','),
   },
   form: {
@@ -132,7 +126,7 @@ const Show = () => {
 />
       <div className={classes.container}>
         <div className={classes.content}>
-        <h1>Latest waypoints</h1>
+        <h1>Waypoints</h1>
         <Grid className={classes.grid}
         container
         >
@@ -172,7 +166,7 @@ const Show = () => {
           lg={4}
           sm={12}
         >
-         <h2>Add waypoint</h2>
+         <h2>Add</h2>
          <form className={classes.form}  noValidate autoComplete="off">
           <TextField name="latitude" label="Latitude" onChange={handleChange} 
           variant="outlined"   defaultValue={latitudeDefault}  />

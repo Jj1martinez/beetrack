@@ -3,5 +3,4 @@ Rails.application.routes.draw do
 
   #Add Waypoint route
   post 'api/v1/gps', to: 'waypoints#add'
-  get 'show', to: 'waypoints#show'
 end

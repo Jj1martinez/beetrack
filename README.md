@@ -4,6 +4,11 @@ Sobre la Api
 ------------------
 Esta API se creó con el motivo de demostrar los conocimientos necesarios sobre Ruby on Rails para la empresa Beetrack. Esta api permite visualizar las últimas posiciones sobre vehículos registrados en esta. Por otro lado, tambien posee una ruta por parte de la API rest en donde se pueden actualizar la última posición para cada vehículo. 
 
+Uso
+----
+
+La api se encuentra en la url https://beetrack-api.herokuapp.com/ para su rapido uso y revisión. De querer correrlo en local se debe tener instalado rails 6.03 y la versión ruby 2.7.1. Luego se debe ejecutar la instalación de los módulos de node.js de la aplicación y de igual forma instalar las gemas del Gemfile. Finalmente se debe crear la base de datos y correr las migraciones. De esta manera podemos ejecutar el comando de inicio para encontrarnos con nuestra aplciación en http://localhost:3000/show y nuestro mapa.
+
 Arquitectura
 ------------
 Para la realización de esta API se diseño una aplicación monolítica la cual posee un backend con framework Ruby on Rails versión 6.03 y dentro del Framewotk se incorporó para el Frontend la gema React-rails para generar vistas con componentes React. React fue incorporado para manejar sencillamente los estados de las vistas y también para acelerar el las requests al backend. 
@@ -121,17 +126,9 @@ Content-Type: application/json
 }
 ```
 
-USO
-----
-
-La api se encuentra en la url https://beetrack-api.herokuapp.com/ para su rapido uso y revisión. De querer correrlo en local se debe tener instalado rails 6.03 y la versión ruby 2.7. Luego se debe ejecutar la instalación de los módulos de node.js de la aplicación. Finalmente se debe crear la base de datos y correr las migraciones. De esta manera podemos ejecutar el comando de inicio para encontrarnos con nuestra aplciación en http://localhost:3000/show y nuestro mapa. 
+ 
 
 Detalle Backend
 ----
 
-Se utilizaron dos controladores. Homepage para renderiar los componentes de React y Waypoint para hacer los calculos logicos y la interacción con la base de datos. 
-
-
-
-
-Things you may want to cover:n 
+Se utilizaron dos controladores. Homepage para renderiar los componentes de React y Waypoint para hacer los calculos logicos y la interacción con la base de datos.

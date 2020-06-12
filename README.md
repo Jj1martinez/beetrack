@@ -14,7 +14,7 @@ De querer correrlo en local se debe tener instalado rails 6.03 y la versión rub
 API UI
 ------
 Esta Api se compone de una sola ruta para visualizar los últimos waypoints de cada vechículo. 
-También es posible agregar el waypoint deseado desde ahí con el formulario que se ofrece siempre y cuando actualice la hora. De no querer agregarlo por ahí se puede hacer mediante la ruta de la API rest. 
+**También es posible agregar el waypoint deseado desde ahí con el formulario que se ofrece siempre y cuando actualice la hora.** De no querer agregarlo por ahí se puede hacer mediante la ruta de la API rest. 
 Al agregar un nuevo Waypoint el mapa se actualiza en tiempo real. Al hacer click en los waypoints podemos ver cual es la posición de esa marca y cual vehículo es el seleccionado. 
 Para la visualización del mapa se utilizó la librería Leaflet debido a su fácil implementación y gratuidad. 
 
